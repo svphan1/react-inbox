@@ -3,7 +3,7 @@ import Message from './Message';
 
 const MessageList = ({ 
   messages, 
-  readMessages, 
+  toggleRead, 
   toggleStarred, 
   toggleSelected
  }) => {
@@ -15,7 +15,7 @@ const MessageList = ({
           <Message
           key={i}
           message={message}
-          readMessages={(event) => {readMessages(event, i)}}
+          toggleRead={(event) => {toggleRead(event, i)}}
           toggleStarred={(event) => {toggleStarred(event, i)}}
           toggleSelected={(event) => {toggleSelected(event, i)}} />
         )

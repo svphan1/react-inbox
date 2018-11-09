@@ -2,7 +2,7 @@ import React from 'react';
 
 const Message = ({
   message, 
-  readMessages, 
+  toggleRead, 
   toggleStarred, 
   toggleSelected
 }) => {
@@ -23,7 +23,7 @@ const Message = ({
         </div>
       </div>
     </div>
-    <div onClick={readMessages} className="col-xs-11">
+    <div onClick={toggleRead} className="col-xs-11">
       <a href="#">
         <div>
          <p>{message.subject}</p>

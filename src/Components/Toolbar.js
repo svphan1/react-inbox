@@ -1,34 +1,36 @@
-import React from 'react';
+import React from "react";
 
 const Toolbar = ({
-  messages, 
-  markAsRead, 
-  markAsUnread, 
-  composeMessage
+  messages,
+  markAsRead,
+  markAsUnread,
+  composeFormHandler
 }) => {
-
-  let unreadCount = messages.filter(message => message.read);
+  let unreadMessages = messages.filter(message => message.read);
 
   return (
     <div className="row toolbar">
       <div className="col-md-12">
         <p className="pull-right">
-          <span className="badge badge">{unreadCount.length}</span>
+          <span className="badge badge">{unreadMessages.length}</span>
           unread messages
-    </p>
+        </p>
 
-        <a className="btn btn-danger" onClick={composeMessage}>
-          <i className="fa fa-plus"></i>
+        <a className="btn btn-danger" onClick={composeFormHandler}>
+          <i className="fa fa-plus" />
         </a>
 
         <button className="btn btn-default">
-          <i className="fa fa-minus-square-o"></i>
+          <i className="fa fa-minus-square-o" />
         </button>
 
-        <button 
-        className="btn btn-default" onClick={markAsRead}>Mark As Read</button>
+        <button className="btn btn-default" onClick={markAsRead}>
+          Mark As Read
+        </button>
 
-        <button className="btn btn-default" onClick={markAsUnread}>Mark As Unread</button>
+        <button className="btn btn-default" onClick={markAsUnread}>
+          Mark As Unread
+        </button>
 
         <select className="form-control label-select">
           <option>Apply label</option>
@@ -45,11 +47,11 @@ const Toolbar = ({
         </select>
 
         <button className="btn btn-default">
-          <i className="fa fa-trash-o"></i>
+          <i className="fa fa-trash-o" />
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Toolbar;
