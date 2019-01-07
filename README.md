@@ -3,7 +3,7 @@ This is a Google Inbox clone that allows users to check messages as read/unread,
 
 Made with React, JavaScript, and Bootstrap.
 
-Deployed Link: http://inbox-clone.surge.sh/ <br />
+[Deployed Link](http://inbox-clone.surge.sh/) <br />
 note: API is from local host so messages won't show in the link. 
 
 Screenshot: 
